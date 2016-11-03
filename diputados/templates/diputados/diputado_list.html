@@ -1,0 +1,16 @@
+<h1>Listado de Diputados</h1>
+<p>
+    <a href="{% url "diputados:new" %}">Agregar Diputado</a>
+</p>
+<ul>
+    {% for diputado in object_list %}
+        <li>
+            <p>{{ diputado.name }}</p>
+            <p>
+                <a href="{% url "diputados:detail" diputado.id %}">Ver</a> | 
+                <a href="{% url "diputados:edit" diputado.id %}">Editar</a> | 
+                <a href="{% url "diputados:delete" diputado.id %}">Borrar</a> 
+            </p>
+        </li>
+    {% endfor %}
+</ul>
