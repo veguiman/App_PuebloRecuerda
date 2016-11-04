@@ -14,6 +14,7 @@ from .models import Diputado
 
 class DiputadoList(ListView):
 	model = Diputado
+	#context_object_name = 'diputados'
 
 class DiputadoDetail(DetailView):
 	model =  Diputado

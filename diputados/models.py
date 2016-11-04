@@ -9,8 +9,7 @@ class Diputado(models.Model):
 	pais= models.CharField(max_length=50)
 	email = models.EmailField(max_length=50)
 	fechaNacimiento= models.DateField()
-	#foto = models.ImageField(upload_to='/assets/images') 
+	foto = models.ImageField(upload_to='/assets/images', null=True) 
 	suplente= models.CharField(max_length=100)
 
-def __str__(self): 
-	return self.nombre
+
