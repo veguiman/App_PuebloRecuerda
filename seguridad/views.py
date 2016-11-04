@@ -26,5 +26,5 @@ def authlogin(request):
 		
 		return redirect('/')
 
-	return rende(request, template, {},)
+	return render(request, template, {},)
 
