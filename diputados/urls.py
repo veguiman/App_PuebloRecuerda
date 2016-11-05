@@ -10,9 +10,11 @@ from .views import (
 
 
 urlpatterns = [
-	url(r'^$', DiputadoList.as_view(), name='list'),
-	url(r'^(?P<pk>\d+)$', DiputadoDetail.as_view(), name='detail'),
-	url(r'^nuevo$', DiputadoCreation.as_view(), name='new'),
-	url(r'^editar/(?P<pk>\d+)$', DiputadoUpdate.as_view(), name='edit'),
-	url(r'^borrar/(?P<pk>\d+)$', DiputadoDelete.as_view(), name="delete"),
+    url(r'^diputados/$', DiputadoList.as_view(), name='list'),
+    url(r'^diputados/(?P<pk>\d+)$', DiputadoDetail.as_view(), name='detail'),
+    url(r'^diputados/nuevo$', DiputadoCreation.as_view(), name='new'),
+    url(r'^diputados/editar/(?P<pk>\d+)$',
+        DiputadoUpdate.as_view(), name='edit'),
+    url(r'^diputados/borrar/(?P<pk>\d+)$',
+        DiputadoDelete.as_view(), name="delete"),
 ]
